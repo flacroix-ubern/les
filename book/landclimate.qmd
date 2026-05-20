@@ -12,7 +12,7 @@ format:
 
 In previous chapters, we have investigated the interactions between the atmosphere and the land surface through the exchange of CO~2~. In this chapter, we focus on interactions through physical processes, including the radiative energy balance and heat fluxes at the land surface. Since these Earth system interactions are also mediated to a large degree through biology, they are referred to as *biogeophysical* processes. This is in contrast to the exchange of CO~2~ and nutrient fluxes, referred to as *biogeochemical* processes.
 
-The partitioning of heat fluxes into sensible (hot air) and latent (moist air) heat fluxes is strongly affected by the availability of water for evaporation and transpiration. All aspects that relate to the water cycle, how it is affected by vegetation, and how it affects the surface energy balance and limits vegetation activity, are introduced in @sec-ecohydrology. However, land-climate interactions are also important in the absence of effects by water limitation. The surface properties, determined by the land cover type, its roughness, and (for vegetation) its conduciveness to evaporating water, have a strong influence on the atmosphere and climatic conditions, especially near the surface - where life happens. Climate and numerical weather prediction models require the fluxes of energy, momentum, and water vapor for simulating atmospheric processes. This chapter introduces how properties of the vegetated land surface affect these fluxes.
+The partitioning of heat fluxes into sensible (hot air) and latent (moist air) heat fluxes is strongly affected by the availability of water for evaporation and transpiration. All aspects that relate to the water cycle, how it is affected by vegetation, and how it affects the surface energy balance and limits vegetation activity, are introduced in @sec-ecohydrology. However, land-climate interactions are also important in the absence of effects by water limitation. The surface properties, determined by the land cover type, its roughness, and (for vegetation) its conduciveness to evaporating water, have a strong influence on the atmosphere and climatic conditions, especially near the surface--where life happens. Climate and numerical weather prediction models require the fluxes of energy, momentum, and water vapor for simulating atmospheric processes. This chapter introduces how properties of the vegetated land surface affect these fluxes.
 
 ## Components of surface radiation
 
@@ -43,7 +43,7 @@ knitr::include_graphics("images/IPCC_AR6_WGI_Figure_7_2.png")
 
 ### Outgoing shortwave radiation and albedo {#sec-albedo}
 
-Outgoing shortwave radiation at the land surface ($S\uparrow$) is determined by the albedo ($\alpha$) - the fraction of the incident radiation that gets reflected.
+Outgoing shortwave radiation at the land surface ($S\uparrow$) is determined by the albedo ($\alpha$)--the fraction of the incident radiation that gets reflected.
 $$
 S\uparrow = \alpha S\downarrow
 $$ {#eq-albedo}
@@ -52,7 +52,7 @@ The albedo varies across different vegetation and other types of Earth surface c
 ```{r warning=FALSE, message=FALSE}
 #| code-fold: true
 #| label: fig-albedo-vegtypes
-#| fig-cap: "Albedo values for different vegetation types. Each point represents a site where surface radiation fluxes were measured. Vegetation types are described in @tbl-vegtype. Data from @cescatti12rse."
+#| fig-cap: "Albedo values for different vegetation types. Each point represents an annual averate for a site where surface radiation fluxes were measured. Vegetation types are described in @tbl-vegtype. Data from @cescatti12rse."
 #| out-width: 60%
 
 library(dplyr)
@@ -76,7 +76,7 @@ df |>
 ```
 
 <!-- Moved the first sentence to the next paragraph as it was a bit out of place here. -->
-Over the seasons, land surface albedo is affected by variations in LAI and by the presence of snow. During winter and in the presence of snow, the albedo of a grassland or a cropland can reach very high values - determined by the albedo of snow. In contrast, the albedo of a forest, even in the presence of snow, remains much lower (0.2-0.4, @zhao14ecolmono). This is because trees are not fully "submerged" in the snow pack, as opposed to grasses, and the exposed canopy absorbs a substantial fraction of the incident radiation. This effect of forest vs. non-forest covers on the surface energy balance during winter is referred to as the *snow masking effect*. Climate model simulations suggest that the low surface albedo during winter warms climate compared to a snow-covered grassland. Thus, deforestation/afforestation of boreal forest has the greatest biogeophysical effect of all biomes on temperatures [@bonan08sci].
+Over the seasons, land surface albedo is affected by variations in LAI and by the presence of snow. During winter and in the presence of snow, the albedo of a grassland or a cropland can reach very high values--determined by the albedo of snow. In contrast, the albedo of a forest, even in the presence of snow, remains much lower (0.2-0.4, @zhao14ecolmono). This is because trees are not fully "submerged" in the snow pack, as opposed to grasses, and the exposed canopy absorbs a substantial fraction of the incident radiation. This effect of forest vs. non-forest covers on the surface energy balance during winter is referred to as the *snow masking effect*. Climate model simulations suggest that the low surface albedo during winter warms climate compared to a snow-covered grassland. Thus, deforestation/afforestation of boreal forest has the greatest biogeophysical effect of all biomes on temperatures [@bonan08sci].
 
 ```{r echo=FALSE}
 #| label: fig-snow-masking
@@ -85,7 +85,7 @@ Over the seasons, land surface albedo is affected by variations in LAI and by th
 knitr::include_graphics("images/snow_masking_bonan.jpg")
 ```
 
-Note that albedo also depends on the wavelength of the radiation, on the solar zenith angle (lower at noon), and on whether the solar radiation is diffuse or direct. Thus, albedo varies over time following a U-shaped diurnal variation - high at sunrise and sunset, and lower in between. $\alpha$ in @eq-albedo represents the albedo for shortwave radiation, and values shown in @fig-albedo-vegtypes are averages across the seasons.
+Note that albedo also depends on the wavelength of the radiation, on the solar zenith angle (lower at noon), and on whether the solar radiation is diffuse or direct. Thus, albedo varies over time following a U-shaped diurnal variation--high at sunrise and sunset, and lower in between. $\alpha$ in @eq-albedo represents the albedo for shortwave radiation, and values shown in @fig-albedo-vegtypes are averages across the seasons.
 
 
 ### Longwave radiation
@@ -238,15 +238,17 @@ Here, $s$ (Pa K^-2^) is the slope of the change in saturation vapor pressure wit
 
 ### Metrics of energy partitioning {#sec-energypartitioning}
 
-Different metrics are used for quantifying the partitioning of net radiation into $H$ and $\lambda E$. When considering totals over longer periods of time (over at least one annual cycle), the ground heat flux $G$ can be neglected since the ground doesn't gradually heat up over time. Hence, the sum of the latent and sensible heat fluxes add up to match net radiation. The *evaporative fraction* quantifies the fraction of available energy from net radiation that goes into the latent heat flux.
+Different metrics are used for quantifying the partitioning of net radiation into $H$ and $\lambda E$. When considering totals over longer periods of time (over at least one annual cycle), the ground heat flux $G$ can be neglected since the ground doesn't continuously heat up over time. Hence, the sum of the latent and sensible heat fluxes adds up to match net radiation. The *evaporative fraction* quantifies the fraction of available energy from net radiation that goes into the latent heat flux. (The remainder goes into the sensible heat flux.)
 $$
-\mathrm{EF} = \lambda E/R_n
+\mathrm{EF} = \lambda E/(\lambda E + H)
 $$
-The remainder goes into the sensible heat flux. The Bowen ratio expresses the same relation and is defined as 
+The sum $\lambda E + H$ can be equated to $R_n - G$ using @eq-energybalance.
+
+The Bowen ratio expresses a closely related relation and is defined as
 $$
 B = H/\lambda E
 $$
-The ratio of actual over potential evapotranspiration ($E/\mathrm{PET}$, also referred to as 'AET/PET') is often used, but measurements of actual evapotranspiration are scarce and model-based estimates are subject to strong assumptions.
+The ratio of actual over potential evapotranspiration ($E/\mathrm{PET}$) is often used, but measurements of actual evapotranspiration are scarce and model-based estimates are subject to strong assumptions.
 
 Quantifications of $EF$, $B$, and $E/\mathrm{PET}$ give important and readily interpretable insights. Variations of these quantities across space and time reflect water limitation to $E$, biophysical surface properties and vegetation activity. For example, in forests, the evaporative fraction is typically lower compared to certain crops, and it's even lower in conifer forests than in deciduous broadleaf forests (@fig-surface-resistance). The evaporative fraction declines as water becomes more limiting during dry (rain-free) periods. An example for the application of $E/\mathrm{PET}$ is the Evaporative Stress Index product (@fig-evaporative-stress), generated by the ECOSTRESS satellite mission [@fisher20wrr].
 
@@ -448,7 +450,7 @@ Under conditions of very low aerodynamic conductance (e.g., in a short-statured 
 
 ## Energy fluxes across biomes
 
-As for C fluxes in @sec-global-patterns, we turn to investigating diurnal and seasonal patterns in fluxes - this time the energy fluxes. The patterns observed at the same sites as used before illustrate general differences across biomes and how different characteristics of the vegetation cover affect the surface energy balance and flux partitioning. In addition to the temperate broadleaved forest site (Hainich Forest, DE-Hai), we consider a coniferous forest (DE-Tha) and a grassland site (DE-Gri) that are located close by (and thus experience largely identical meteorological conditions, ignoring feedbacks from vegetation-atmosphere fluxes that affect near-surface climate).
+As for C fluxes in @sec-global-patterns, we turn to investigating diurnal and seasonal patterns in fluxes--this time the energy fluxes. The patterns observed at the same sites as used before illustrate general differences across biomes and how different characteristics of the vegetation cover affect the surface energy balance and flux partitioning. In addition to the temperate broadleaved forest site (Hainich Forest, DE-Hai), we consider a coniferous forest (DE-Tha) and a grassland site (DE-Gri) that are located closeby (and thus experience largely identical meteorological conditions, ignoring feedbacks from vegetation-atmosphere fluxes that affect near-surface climate).
 
 ```{r, message=FALSE, warning=FALSE}
 #| code-fold: true
