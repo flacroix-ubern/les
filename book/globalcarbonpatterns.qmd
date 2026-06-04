@@ -221,6 +221,9 @@ df |>
   )
 ```
 
+<!-- xxx add note that toa radiation is not the same as surface radiation. the surface radiation is lower at the pole in comparison to the equator even in mid-summer because the solar zenith angle is large, implying a longer path length of solar radiation across the atmosphere (and therefore more absorption) and the zenith-angle dependent planetary albedo. -->
+
+
 ```{r}
 #| code-fold: true
 #| label: fig-stoa_hovmoeller
